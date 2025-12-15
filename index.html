@@ -1,4 +1,4 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
@@ -6,168 +6,133 @@ DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-:root {
-    --dark: #1e1e1e;
-    --accent: #ff6a00;
-    --light: #f5f5f5;
-    --white: #ffffff;
+:root{
+    --dark:#1c1c1c;
+    --accent:#ff6a00;
+    --light:#f4f4f4;
+    --white:#ffffff;
 }
 
-* { box-sizing: border-box; }
-
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: var(--light);
-    color: #333;
+*{
+    box-sizing:border-box;
 }
 
-/* HERO */
-.hero {
-    background: linear-gradient(120deg, #1e1e1e, #2b2b2b);
-    color: white;
-    padding: 110px 20px 80px;
-    text-align: center;
+body{
+    margin:0;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:var(--light);
+    color:#333;
 }
 
-.hero h1 {
-    font-size: 54px;
-    margin-bottom: 10px;
+/* HEADER / HERO */
+.hero{
+    background:#1c1c1c;
+    color:white;
+    padding:60px 20px;
+    text-align:center;
 }
 
-.hero span {
-    color: var(--accent);
+.logo{
+    width:200px;
+    background:white;
+    padding:14px;
+    border-radius:16px;
+    margin-bottom:25px;
 }
 
-.hero p {
-    font-size: 20px;
-    max-width: 750px;
-    margin: 0 auto;
+.hero h1{
+    font-size:48px;
+    margin:10px 0;
 }
 
-/* SECTIONS */
-section {
-    max-width: 1150px;
-    margin: 90px auto;
-    padding: 0 20px;
+.hero span{
+    color:var(--accent);
 }
 
-h2 {
-    font-size: 38px;
-    margin-bottom: 25px;
+.hero p{
+    font-size:20px;
+    max-width:700px;
+    margin:0 auto;
 }
 
 /* REVIEWS */
-.reviews {
-    margin-top: -40px;
+.reviews{
+    max-width:1100px;
+    margin:60px auto;
+    padding:0 20px;
 }
 
-.review-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:25px;
 }
 
-.review {
-    background: white;
-    padding: 30px;
-    border-radius: 18px;
-    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+.review{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
-.stars {
-    color: var(--accent);
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.review span {
-    font-size: 14px;
-    color: #666;
+.stars{
+    color:var(--accent);
+    font-size:20px;
+    margin-bottom:10px;
 }
 
 /* SERVICES */
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+section{
+    max-width:1100px;
+    margin:80px auto;
+    padding:0 20px;
 }
 
-.card {
-    background: white;
-    padding: 35px;
-    border-radius: 18px;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.08);
-    transition: transform .3s ease;
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:30px;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-}
-
-.card h3 {
-    color: var(--accent);
-}
-
-/* GALLERY */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 22px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    border-radius: 18px;
+.card{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
 }
 
 /* CTA */
-.cta {
-    background: var(--dark);
-    color: white;
-    padding: 90px 20px;
-    text-align: center;
+.cta{
+    background:#1c1c1c;
+    color:white;
+    text-align:center;
+    padding:70px 20px;
 }
 
-.cta span {
-    color: var(--accent);
-}
-
-.cta p {
-    font-size: 20px;
+.cta span{
+    color:var(--accent);
 }
 
 /* FOOTER */
-footer {
-    background: #111;
-    color: #888;
-    text-align: center;
-    padding: 25px;
-    font-size: 14px;
+footer{
+    background:#111;
+    color:#777;
+    text-align:center;
+    padding:25px;
 }
 
-/* WHATSAPP BUTTON */
-.whatsapp {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: #25d366;
-    color: white;
-    padding: 16px 22px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-.whatsapp:hover {
-    background: #1ebe5d;
-}
-
-@media (max-width: 600px) {
-    .hero h1 { font-size: 38px; }
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25d366;
+    color:white;
+    padding:15px 22px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 </style>
 </head>
@@ -176,86 +141,63 @@ footer {
 
 <!-- HERO -->
 <div class="hero">
+    <img src="file_000000004bdc71f4a31694a061ba914a.png" 
+         alt="Berkan’s Opperdiensten logo" 
+         class="logo">
+
     <h1>Berkan’s <span>Opperdiensten</span></h1>
-    <p>Moderne sloopwerkzaamheden met vakmanschap, precisie en betrouwbaarheid.  
-    ZZP-bedrijf actief sinds 2019.</p>
+    <p>
+        Professioneel sloopwerk door een betrouwbare ZZP’er.<br>
+        Actief sinds 2019 – netjes, snel en vakkundig.
+    </p>
 </div>
 
 <!-- REVIEWS -->
-<section class="reviews">
-    <h2>Wat klanten zeggen</h2>
+<div class="reviews">
     <div class="review-grid">
         <div class="review">
             <div class="stars">★★★★★</div>
-            <p>“Netjes gewerkt en alles schoon opgeleverd. Goede communicatie en afspraken nagekomen.”</p>
-            <span>— Mark, particulier</span>
+            Net werk geleverd, alles schoon achtergelaten.
+            <br><small>— Mark</small>
         </div>
+
         <div class="review">
             <div class="stars">★★★★★</div>
-            <p>“Betrouwbare ZZP’er, werkt snel en professioneel. Zeker iemand om vaker in te schakelen.”</p>
-            <span>— Ahmed, aannemer</span>
+            Komt afspraken na en werkt professioneel.
+            <br><small>— Ahmed</small>
         </div>
+
         <div class="review">
             <div class="stars">★★★★☆</div>
-            <p>“Badkamer netjes gesloopt zonder schade. Prettige samenwerking.”</p>
-            <span>— Linda, renovatie</span>
+            Goede ervaring, zou hem opnieuw bellen.
+            <br><small>— Linda</small>
         </div>
     </div>
-</section>
+</div>
 
 <!-- SERVICES -->
 <section>
-    <h2>Onze diensten</h2>
+    <h2>Diensten</h2>
     <div class="services">
-        <div class="card">
-            <h3>Renovatiesloop</h3>
-            <p>Vakkundige sloopwerkzaamheden voor renovatieprojecten.</p>
-        </div>
-        <div class="card">
-            <h3>Badkamer & keuken</h3>
-            <p>Strakke demontage zonder onnodige schade.</p>
-        </div>
-        <div class="card">
-            <h3>Stripwerk</h3>
-            <p>Volledig strippen van woningen en bedrijfspanden.</p>
-        </div>
-        <div class="card">
-            <h3>Afvoer & oplevering</h3>
-            <p>Alles netjes achtergelaten, inclusief afvoer sloopafval.</p>
-        </div>
-    </div>
-</section>
-
-<!-- GALLERY -->
-<section>
-    <h2>Ons werk</h2>
-    <div class="gallery">
-        <img src="sloop1.jpg">
-        <img src="sloop2.jpg">
-        <img src="sloop3.jpg">
+        <div class="card">Renovatie sloopwerk</div>
+        <div class="card">Badkamer & keuken sloop</div>
+        <div class="card">Woning strippen</div>
+        <div class="card">Schoon opleveren</div>
     </div>
 </section>
 
 <!-- CTA -->
 <div class="cta">
     <h2>Klaar voor <span>professioneel sloopwerk?</span></h2>
-    <p>Neem direct contact op voor een vrijblijvende offerte.</p>
-    <p>
-        📞 06-XXXXXXXX<br>
-        ✉️ info@berkansopperdiensten.nl
-    </p>
+    <p>Neem contact op voor een vrijblijvende offerte</p>
+    <p>📞 06-XXXXXXXX</p>
 </div>
 
 <footer>
 © 2019–2025 Berkan’s Opperdiensten
 </footer>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" 
-   href="https://wa.me/316XXXXXXXX?text=Hallo%20Berkan,%20ik%20heb%20interesse%20in%20sloopwerkzaamheden."
-   target="_blank">
-   💬 WhatsApp
-</a>
+<a href="https://wa.me/316XXXXXXXX" class="whatsapp">💬 WhatsApp</a>
 
 </body>
 </html>
