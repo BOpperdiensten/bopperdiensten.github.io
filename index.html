@@ -1,185 +1,280 @@
-
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-  
-    
-
-      Berkan Opperdiensten
-      
-
-        Diensten
-        Over ons
-        Contact
-      
-
-    
-
-  
-  
-    
-
-      
-Vakmanschap in Spouw, Isolatie, Sloop & Renovatie
-
-      
-Berkan Opperdiensten is sinds 2019 dé specialist voor hoogwaardige bouw- en renovatiewerkzaamheden. Betrouwbaar, professioneel en resultaatgericht.
-
-      Neem Contact Op
-    
-
-  
-  
-
-    
-
-      
-Onze Diensten
-
-      
-
-        
-
-          
-          
-Spouwmuurwerkzaamheden
-
-          
-Professionele en duurzame spouwoplossingen voor nieuwbouw en bestaande panden.
-
-        
-
-        
-
-          
-          
-Isolatiewerkzaamheden
-
-          
-Energiebesparende isolatie voor optimaal comfort en lagere kosten.
-
-        
-
-        
-
-          
-          
-Sloopwerkzaamheden
-
-          
-Veilig, gecontroleerd en efficiënt sloopwerk volgens alle richtlijnen.
-
-        
-
-        
-
-          
-          
-Renovatie
-
-          
-Volledige renovaties met oog voor detail en kwaliteit.
-
-        
-
-      
-
-    
-
-  
-
-  
-
-    
-
-      
-Projecten
-
-      
-
-        
-Foto komt hier
-
-        
-Foto komt hier
-
-        
-Foto komt hier
-
-        
-Foto komt hier
-
-      
-
-    
-
-  
-
-  
-
-    
-
-      
-
-        
-Over Berkan Opperdiensten
-
-        
-Berkan Opperdiensten is sinds 2019 actief in de bouw- en renovatiesector. Met jarenlange ervaring, vakkennis en een professionele aanpak leveren wij betrouwbare oplossingen voor elk project.
-
-        
-Wij staan voor duidelijke communicatie, kwaliteit en klanttevredenheid.
-
-      
-
-      
-
-        
-      
-
-    
-
-  
-
-  
-
-    
-
-      
-Contact
-
-      
-        
-        
-        
-        Verstuur Bericht
-      
-      
-
-      
-Neem vrijblijvend contact met ons op
-
-      📞 06 8177 6810
-      ✉️ berkanopperdiensten@gmail.com
-    
-
-  
-
-  
-    © 2025 Berkan Opperdiensten | Alle rechten voorbehouden
-  
-  
-    
-  
-
-
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Berkan Opperdiensten | Spouw, Isolatie, Sloop & Renovatie</title>
+<meta name="description" content="Berkan Opperdiensten – Specialist in spouw, isolatie, sloop en renovatie sinds 2019.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+--dark:#0b0f14;
+--primary:#1f2933;
+--gold:#c9a227;
+--light:#f5f7fa;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:var(--light);
+color:var(--primary);
+}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(11,15,20,0.95);
+z-index:1000;
+}
+nav .nav-inner{
+max-width:1200px;
+margin:auto;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+}
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+}
+nav a:hover{color:var(--gold);}
+
+/* HERO */
+header{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('header.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+}
+.hero{
+max-width:1200px;
+margin:auto;
+padding:20px;
+color:white;
+}
+.hero h1{
+font-size:3rem;
+margin-bottom:20px;
+}
+.hero p{
+font-size:1.2rem;
+max-width:650px;
+margin-bottom:30px;
+}
+.btn{
+background:var(--gold);
+color:black;
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* SECTIONS */
+section{
+padding:90px 20px;
+max-width:1200px;
+margin:auto;
+}
+h2{
+text-align:center;
+font-size:2.4rem;
+margin-bottom:50px;
+}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+.service{
+background:white;
+padding:35px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.service i{
+font-size:40px;
+color:var(--gold);
+margin-bottom:20px;
+}
+
+/* PROJECTEN */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+.gallery div{
+height:200px;
+background:#e5e7eb;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#666;
+}
+
+/* ABOUT */
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+}
+
+/* CONTACT */
+.contact{
+background:var(--primary);
+color:white;
+text-align:center;
+}
+.contact a{
+color:var(--gold);
+display:block;
+margin:10px 0;
+text-decoration:none;
+}
+form{
+max-width:500px;
+margin:30px auto;
+display:grid;
+gap:15px;
+}
+input,textarea{
+padding:15px;
+border-radius:8px;
+border:none;
+}
+button{
+padding:15px;
+border:none;
+background:var(--gold);
+font-weight:600;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+background:black;
+color:#aaa;
+text-align:center;
+padding:20px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+@media(max-width:768px){
+.hero h1{font-size:2.2rem;}
+.about{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav-inner">
+<strong>Berkan Opperdiensten</strong>
+<div>
+<a href="#diensten">Diensten</a>
+<a href="#projecten">Projecten</a>
+<a href="#over">Over ons</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<header>
+<div class="hero">
+<h1>Vakmanschap in Spouw, Isolatie, Sloop & Renovatie</h1>
+<p>Sinds 2019 levert Berkan Opperdiensten professionele en betrouwbare bouwoplossingen voor particulieren en bedrijven.</p>
+<a href="#contact" class="btn">Neem contact op</a>
+</div>
+</header>
+
+<section id="diensten">
+<h2>Onze Diensten</h2>
+<div class="services">
+<div class="service"><i class="fa-solid fa-building"></i><h3>Spouwmuurwerk</h3><p>Professionele spouwoplossingen voor duurzaamheid.</p></div>
+<div class="service"><i class="fa-solid fa-temperature-high"></i><h3>Isolatie</h3><p>Energiebesparende isolatiewerkzaamheden.</p></div>
+<div class="service"><i class="fa-solid fa-hammer"></i><h3>Sloop</h3><p>Veilig en gecontroleerd sloopwerk.</p></div>
+<div class="service"><i class="fa-solid fa-house"></i><h3>Renovatie</h3><p>Volledige renovaties met kwaliteit.</p></div>
+</div>
+</section>
+
+<section id="projecten">
+<h2>Projecten</h2>
+<div class="gallery">
+<div>Foto</div>
+<div>Foto</div>
+<div>Foto</div>
+<div>Foto</div>
+</div>
+</section>
+
+<section id="over">
+<h2>Over Ons</h2>
+<div class="about">
+<div>
+<p>Berkan Opperdiensten is sinds 2019 actief in spouw, isolatie, sloop en renovatie. Wij staan voor vakmanschap, betrouwbaarheid en duidelijke communicatie.</p>
+</div>
+<div>Foto / Logo</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact</h2>
+<form>
+<input type="text" placeholder="Naam" required>
+<input type="email" placeholder="E-mail" required>
+<textarea placeholder="Bericht"></textarea>
+<button type="submit">Verstuur</button>
+</form>
+<a href="tel:0681776810">📞 06 8177 6810</a>
+<a href="mailto:berkanopperdiensten@gmail.com">✉️ berkanopperdiensten@gmail.com</a>
+</section>
+
+<footer>
+© 2025 Berkan Opperdiensten – Alle rechten voorbehouden
+</footer>
+
+<a class="whatsapp" href="https://wa.me/31681776810" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
