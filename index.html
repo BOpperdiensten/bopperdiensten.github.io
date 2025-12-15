@@ -13,9 +13,7 @@
     --white: #ffffff;
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
@@ -26,14 +24,14 @@ body {
 
 /* HERO */
 .hero {
-    background: linear-gradient(120deg, #1e1e1e, #2a2a2a);
+    background: linear-gradient(120deg, #1e1e1e, #2b2b2b);
     color: white;
-    padding: 110px 20px;
+    padding: 110px 20px 80px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 52px;
+    font-size: 54px;
     margin-bottom: 10px;
 }
 
@@ -43,7 +41,7 @@ body {
 
 .hero p {
     font-size: 20px;
-    max-width: 720px;
+    max-width: 750px;
     margin: 0 auto;
 }
 
@@ -57,6 +55,35 @@ section {
 h2 {
     font-size: 38px;
     margin-bottom: 25px;
+}
+
+/* REVIEWS */
+.reviews {
+    margin-top: -40px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.review {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+.stars {
+    color: var(--accent);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.review span {
+    font-size: 14px;
+    color: #666;
 }
 
 /* SERVICES */
@@ -79,4 +106,156 @@ h2 {
 }
 
 .card h3 {
-    color: var
+    color: var(--accent);
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* CTA */
+.cta {
+    background: var(--dark);
+    color: white;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.cta span {
+    color: var(--accent);
+}
+
+.cta p {
+    font-size: 20px;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: #888;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: white;
+    padding: 16px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.whatsapp:hover {
+    background: #1ebe5d;
+}
+
+@media (max-width: 600px) {
+    .hero h1 { font-size: 38px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Berkan’s <span>Opperdiensten</span></h1>
+    <p>Moderne sloopwerkzaamheden met vakmanschap, precisie en betrouwbaarheid.  
+    ZZP-bedrijf actief sinds 2019.</p>
+</div>
+
+<!-- REVIEWS -->
+<section class="reviews">
+    <h2>Wat klanten zeggen</h2>
+    <div class="review-grid">
+        <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>“Netjes gewerkt en alles schoon opgeleverd. Goede communicatie en afspraken nagekomen.”</p>
+            <span>— Mark, particulier</span>
+        </div>
+        <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>“Betrouwbare ZZP’er, werkt snel en professioneel. Zeker iemand om vaker in te schakelen.”</p>
+            <span>— Ahmed, aannemer</span>
+        </div>
+        <div class="review">
+            <div class="stars">★★★★☆</div>
+            <p>“Badkamer netjes gesloopt zonder schade. Prettige samenwerking.”</p>
+            <span>— Linda, renovatie</span>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section>
+    <h2>Onze diensten</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Renovatiesloop</h3>
+            <p>Vakkundige sloopwerkzaamheden voor renovatieprojecten.</p>
+        </div>
+        <div class="card">
+            <h3>Badkamer & keuken</h3>
+            <p>Strakke demontage zonder onnodige schade.</p>
+        </div>
+        <div class="card">
+            <h3>Stripwerk</h3>
+            <p>Volledig strippen van woningen en bedrijfspanden.</p>
+        </div>
+        <div class="card">
+            <h3>Afvoer & oplevering</h3>
+            <p>Alles netjes achtergelaten, inclusief afvoer sloopafval.</p>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+    <h2>Ons werk</h2>
+    <div class="gallery">
+        <img src="sloop1.jpg">
+        <img src="sloop2.jpg">
+        <img src="sloop3.jpg">
+    </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+    <h2>Klaar voor <span>professioneel sloopwerk?</span></h2>
+    <p>Neem direct contact op voor een vrijblijvende offerte.</p>
+    <p>
+        📞 06-XXXXXXXX<br>
+        ✉️ info@berkansopperdiensten.nl
+    </p>
+</div>
+
+<footer>
+© 2019–2025 Berkan’s Opperdiensten
+</footer>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" 
+   href="https://wa.me/316XXXXXXXX?text=Hallo%20Berkan,%20ik%20heb%20interesse%20in%20sloopwerkzaamheden."
+   target="_blank">
+   💬 WhatsApp
+</a>
+
+</body>
+</html>
