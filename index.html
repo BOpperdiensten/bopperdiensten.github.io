@@ -4,104 +4,109 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Berkan Opperdiensten | Industrial Bouw & Isolatie</title>
-<meta name="description" content="Berkan Opperdiensten – spouwmuur, isolatie, sloop en renovatie sinds 2019. Eenmanszaak. Rauw vakmanschap.">
+<title>Berkan Opperdiensten | Spouwmuur & Isolatie Specialist</title>
+<meta name="description" content="Berkan Opperdiensten – specialist in spouwmuurwerk, isolatie, sloop en renovatie sinds 2019. Bespaar energie en verhoog uw wooncomfort.">
+<meta name="robots" content="index, follow">
 
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root{
---black:#070707;
---steel:#0f172a;
+--bg:#050505;
+--panel:#020617;
 --gold:#c9a227;
---gray:#9ca3af;
 --white:#f9fafb;
+--gray:#9ca3af;
 }
 
 /* RESET */
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-background:var(--black);
+background:var(--bg);
 color:var(--white);
 font-family:'Inter',sans-serif;
 overflow-x:hidden;
+line-height:1.7;
 }
 
-/* LOADING SCREEN */
+/* GRAIN */
+body::after{
+content:"";
+position:fixed;inset:0;
+background:url('https://grainy-gradients.vercel.app/noise.svg');
+opacity:.05;
+pointer-events:none;
+z-index:999;
+}
+
+/* LOADER */
 #loader{
-position:fixed;
-inset:0;
-background:radial-gradient(circle at center,#020617,#000);
+position:fixed;inset:0;
+background:black;
 display:flex;
 align-items:center;
 justify-content:center;
 z-index:99999;
 }
-.loader-inner{
-text-align:center;
+#loader img{
+height:140px;
 animation:pulse 2s infinite;
-}
-.loader-inner img{
-height:120px;
-filter:drop-shadow(0 0 30px rgba(201,162,39,.5));
+filter:drop-shadow(0 0 30px rgba(201,162,39,.6));
 }
 @keyframes pulse{
-0%{transform:scale(1);opacity:.6}
-50%{transform:scale(1.05);opacity:1}
-100%{transform:scale(1);opacity:.6}
-}
-
-/* NOISE */
-body::after{
-content:"";
-position:fixed;
-inset:0;
-background:url('https://grainy-gradients.vercel.app/noise.svg');
-opacity:.05;
-pointer-events:none;
-z-index:9999;
+0%{opacity:.5}50%{opacity:1}100%{opacity:.5}
 }
 
 /* NAV */
 nav{
 position:fixed;
 top:0;width:100%;
-background:rgba(5,5,5,.85);
-backdrop-filter:blur(8px);
+background:rgba(5,5,5,.9);
+backdrop-filter:blur(10px);
 border-bottom:1px solid rgba(255,255,255,.05);
 z-index:1000;
 }
 .nav{
 max-width:1400px;
 margin:auto;
-padding:20px 28px;
+padding:18px 28px;
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
 }
-.nav img{
-height:95px;
-filter:drop-shadow(0 0 20px rgba(201,162,39,.25));
-transition:.4s;
-}
-.nav img:hover{transform:scale(1.05)}
+.nav img{height:96px}
 .nav a{
 margin-left:36px;
 color:var(--white);
 text-decoration:none;
-letter-spacing:.1em;
 font-weight:500;
+letter-spacing:.15em;
+}
+.nav a:hover{color:var(--gold)}
+
+/* GLITCH */
+.glitch{
 position:relative;
+font-family:'Oswald',sans-serif;
+letter-spacing:.18em;
+text-transform:uppercase;
 }
-.nav a::after{
-content:"";
-position:absolute;
-left:0;bottom:-6px;
-width:0;height:2px;
-background:var(--gold);
-transition:.3s;
+.glitch::before,
+.glitch::after{
+content:attr(data-text);
+position:absolute;left:0;top:0;
+opacity:.8;
 }
-.nav a:hover::after{width:100%}
+.glitch::before{
+color:var(--gold);
+transform:translate(2px,-2px);
+clip-path:inset(0 0 50% 0);
+}
+.glitch::after{
+color:red;
+transform:translate(-2px,2px);
+clip-path:inset(50% 0 0 0);
+}
 
 /* HERO */
 header{
@@ -114,40 +119,27 @@ inset:0;
 width:100%;
 height:100%;
 object-fit:cover;
-filter:brightness(.3) contrast(1.15);
+filter:brightness(.3);
 }
 .hero-overlay{
-position:absolute;
-inset:0;
-background:
-linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.6)),
-radial-gradient(circle at 30% 80%,rgba(201,162,39,.18),transparent 60%);
+position:absolute;inset:0;
+background:linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.6));
 }
 .hero{
 position:relative;
 z-index:2;
 max-width:1400px;
 margin:auto;
-padding:230px 28px;
+padding:240px 28px;
 }
-.hero h1{
-font-family:'Oswald',sans-serif;
-font-size:4.2rem;
-letter-spacing:.15em;
-text-transform:uppercase;
-margin-bottom:26px;
-animation:slideUp 1.2s ease forwards;
-}
-@keyframes slideUp{
-from{opacity:0;transform:translateY(60px)}
-to{opacity:1;transform:none}
-}
+.hero h1{font-size:4rem;margin-bottom:24px}
 .hero p{
-max-width:720px;
+max-width:760px;
 color:#e5e7eb;
-font-size:1.15rem;
-margin-bottom:44px;
+margin-bottom:42px;
 }
+
+/* CTA */
 .cta{
 display:inline-block;
 padding:18px 52px;
@@ -155,31 +147,20 @@ border:2px solid var(--gold);
 color:var(--gold);
 text-decoration:none;
 font-weight:600;
-letter-spacing:.15em;
+letter-spacing:.2em;
 text-transform:uppercase;
-transition:.35s;
 }
 .cta:hover{
 background:var(--gold);
 color:black;
-box-shadow:0 0 40px rgba(201,162,39,.6);
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
 max-width:1400px;
 margin:auto;
 padding:140px 28px;
 }
-.section-title{
-font-family:'Oswald',sans-serif;
-font-size:3rem;
-letter-spacing:.18em;
-text-transform:uppercase;
-margin-bottom:60px;
-}
-
-/* REVEAL */
 .reveal{
 opacity:0;
 transform:translateY(60px);
@@ -193,105 +174,52 @@ transform:none;
 /* SERVICES */
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:40px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:36px;
 }
-.service{
-background:linear-gradient(145deg,#020617,#020617);
-border:1px solid rgba(255,255,255,.05);
-padding:55px;
-position:relative;
-overflow:hidden;
+.card{
+background:var(--panel);
+border:1px solid rgba(255,255,255,.06);
+padding:50px;
 }
-.service::before{
-content:"";
-position:absolute;
-inset:0;
-background:linear-gradient(120deg,transparent,rgba(201,162,39,.18),transparent);
-transform:translateX(-120%);
-transition:.6s;
-}
-.service:hover::before{transform:translateX(120%)}
-.service h3{
+.card h3{
 font-family:'Oswald',sans-serif;
 letter-spacing:.12em;
 margin-bottom:14px;
-}
-
-/* SPLIT */
-.split{
-display:grid;
-grid-template-columns:1.2fr 1fr;
-gap:90px;
-align-items:center;
-}
-.split-box{
-background:#020617;
-border-left:5px solid var(--gold);
-padding:60px;
 }
 
 /* PROJECTS */
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-}
-.project{
-position:relative;
-overflow:hidden;
-border:1px solid rgba(255,255,255,.06);
+gap:28px;
 }
 .project img{
 width:100%;
 height:260px;
 object-fit:cover;
-filter:grayscale(.4);
-transition:.6s;
-}
-.project:hover img{
-transform:scale(1.12);
-filter:none;
-}
-.project span{
-position:absolute;
-bottom:18px;
-left:18px;
-font-family:'Oswald',sans-serif;
-letter-spacing:.1em;
-}
-
-/* REVIEWS */
-.reviews{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:36px;
-}
-.review{
-background:#020617;
-border-left:5px solid var(--gold);
-padding:40px;
-font-style:italic;
+filter:grayscale(.3);
 }
 
 /* CONTACT */
 .contact{
-background:radial-gradient(circle at top,rgba(201,162,39,.2),transparent 65%);
 text-align:center;
+background:var(--panel);
+border-radius:18px;
 }
 .contact a{
 display:block;
 margin-top:18px;
 color:var(--gold);
+font-size:1.1rem;
 text-decoration:none;
-font-size:1.15rem;
 }
 
 /* WHATSAPP */
 .whatsapp{
 position:fixed;
-right:28px;
-bottom:28px;
+right:26px;
+bottom:26px;
 width:72px;height:72px;
 background:#25D366;
 border-radius:50%;
@@ -300,24 +228,20 @@ align-items:center;
 justify-content:center;
 font-size:34px;
 color:white;
+box-shadow:0 0 30px rgba(37,211,102,.6);
 z-index:1000;
-box-shadow:0 0 40px rgba(37,211,102,.6);
 }
 
 @media(max-width:900px){
 .hero h1{font-size:2.5rem}
-.split{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
 
-<!-- LOADER -->
 <div id="loader">
-  <div class="loader-inner">
-    <img src="bologo1.png" alt="Berkan Opperdiensten">
-  </div>
+<img src="bologo1.png" alt="Berkan Opperdiensten">
 </div>
 
 <nav>
@@ -325,7 +249,7 @@ box-shadow:0 0 40px rgba(37,211,102,.6);
 <img src="bologo1.png">
 <div>
 <a href="#diensten">Diensten</a>
-<a href="#over">Over</a>
+<a href="#isolatie">Isolatie</a>
 <a href="#projecten">Projecten</a>
 <a href="#contact">Contact</a>
 </div>
@@ -339,87 +263,82 @@ box-shadow:0 0 40px rgba(37,211,102,.6);
 <div class="hero-overlay"></div>
 
 <div class="hero">
-<h1>RAW<br>INDUSTRIAL<br>CRAFTSMANSHIP</h1>
+<h1 class="glitch" data-text="VAKMANSCHAP SINDS 2019">
+VAKMANSCHAP SINDS 2019
+</h1>
 <p>
-Spouwmuurwerk, isolatie, sloop en renovatie sinds 2019.
-Eén aanspreekpunt. Geen bullshit. Alleen strak werk.
+Berkan Opperdiensten is een eenmanszaak gespecialiseerd in
+spouwmuurwerk, isolatie, sloop en renovatie.
+Duidelijke afspraken, eerlijk advies en strak uitgevoerd werk.
 </p>
-<a href="#contact" class="cta">Contact opnemen</a>
+<a href="#contact" class="cta">Vrijblijvend contact</a>
 </div>
 </header>
 
 <section id="diensten" class="reveal">
-<h2 class="section-title">Diensten</h2>
+<h2 class="glitch" data-text="DIENSTEN">DIENSTEN</h2>
 <div class="services">
-<div class="service"><h3>Spouwmuurwerk</h3><p>Bescherming tegen vocht en kou.</p></div>
-<div class="service"><h3>Isolatie</h3><p>Lagere energiekosten en comfort.</p></div>
-<div class="service"><h3>Sloop & Renovatie</h3><p>Strak, veilig en gecontroleerd.</p></div>
+<div class="card"><h3>Spouwmuurwerk</h3><p>Bescherming tegen vocht, kou en warmteverlies.</p></div>
+<div class="card"><h3>Isolatie</h3><p>Lagere energiekosten en beter wooncomfort.</p></div>
+<div class="card"><h3>Sloop & Renovatie</h3><p>Veilig, gecontroleerd en professioneel uitgevoerd.</p></div>
 </div>
 </section>
 
-<section id="over" class="reveal">
-<div class="split">
-<div>
-<h2 class="section-title">Waarom Berkan</h2>
-<p class="muted">
-Als eenmanszaak heeft u direct contact met degene die het werk uitvoert.
-Geen lagen. Geen verrassingen.
+<section id="isolatie" class="reveal">
+<h2 class="glitch" data-text="WAAROM SPOUWMUUR ISOLATIE?">
+WAAROM SPOUWMUUR ISOLATIE?
+</h2>
+<div class="services">
+<div class="card">
+<h3>Direct besparen</h3>
+<p>
+Veel woningen verliezen warmte via slecht geïsoleerde muren.
+Spouwmuurisolatie kan <strong>10% tot 30% besparen</strong> op energiekosten.
 </p>
 </div>
-<div class="split-box">
-✓ Sinds 2019 actief<br>
-✓ Eén aanspreekpunt<br>
-✓ Eerlijk advies<br>
-✓ Netjes opgeleverd
+<div class="card">
+<h3>Meer comfort</h3>
+<p>
+Warm in de winter, koeler in de zomer.
+Geen koude muren of tocht.
+</p>
+</div>
+<div class="card">
+<h3>Snelle uitvoering</h3>
+<p>
+Vaak binnen één dag uitgevoerd,
+zonder ingrijpende verbouwing.
+</p>
 </div>
 </div>
 </section>
 
 <section id="projecten" class="reveal">
-<h2 class="section-title">Projecten</h2>
+<h2 class="glitch" data-text="PROJECTEN">PROJECTEN</h2>
 <div class="projects">
-<div class="project"><img src="proj1.jpg"><span>Spouw</span></div>
-<div class="project"><img src="proj2.jpg"><span>Isolatie</span></div>
-<div class="project"><img src="proj3.jpg"><span>Renovatie</span></div>
-</div>
-</section>
-
-<section class="reveal">
-<h2 class="section-title">Ervaringen</h2>
-<div class="reviews">
-<div class="review">“Direct verschil merkbaar.”</div>
-<div class="review">“Netjes en professioneel.”</div>
-<div class="review">“Geen poespas, goed werk.”</div>
+<img src="proj1.jpg">
+<img src="proj2.jpg">
+<img src="proj3.jpg">
+<img src="bologo1.png">
 </div>
 </section>
 
 <section id="contact" class="contact reveal">
-<h2 class="section-title">Contact</h2>
-<a href="tel:0681776810">06 8177 6810</a>
-<a href="mailto:berkanopperdiensten@gmail.com">berkanopperdiensten@gmail.com</a>
+<h2 class="glitch" data-text="CONTACT">CONTACT</h2>
+<p>
+Wilt u weten wat isolatie voor uw woning kan betekenen?
+Neem vrijblijvend contact op.
+</p>
+<a href="tel:0681776810">📞 06 8177 6810</a>
+<a href="mailto:berkanopperdiensten@gmail.com">✉️ berkanopperdiensten@gmail.com</a>
 </section>
-
-<footer style="text-align:center;padding:40px;color:#6b7280">
-© 2025 Berkan Opperdiensten
-</footer>
 
 <a class="whatsapp" href="https://wa.me/31681776810">💬</a>
 
 <script>
-/* LOADER */
 window.addEventListener("load",()=>{
-setTimeout(()=>document.getElementById("loader").style.display="none",800);
-});
-
-/* REVEAL */
-const reveals=document.querySelectorAll('.reveal');
-window.addEventListener('scroll',()=>{
-const t=window.innerHeight*0.85;
-reveals.forEach(el=>{
-if(el.getBoundingClientRect().top<t){
-el.classList.add('show');
-}
-});
+document.getElementById("loader").style.display="none";
+document.querySelectorAll(".reveal").forEach(el=>el.classList.add("show"));
 });
 </script>
 
