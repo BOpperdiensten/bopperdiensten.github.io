@@ -2,13 +2,16 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<title>Berkan’s Opperdiensten – Professioneel Sloopwerk</title>
+<title>Berkan’s Opperdiensten | Professioneel Sloopwerk</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="file_0000000041b07243b15f2939a319b276.png">
 
 <style>
 :root{
-    --dark:#0f0f0f;
-    --dark2:#1c1c1c;
+    --dark:#0e0e0e;
+    --dark2:#1a1a1a;
     --accent:#ff6a00;
     --bg:#f2f2f2;
     --text:#222;
@@ -27,59 +30,48 @@ body{
 
 /* ===== HEADER ===== */
 header{
-    background:var(--dark);
+    background:linear-gradient(135deg,#0b0b0b,#1e1e1e);
     color:white;
-    padding:80px 20px 90px;
+    padding:110px 20px 130px;
     text-align:center;
 }
 
 .logo{
-    width:320px;
+    width:420px;
     max-width:90%;
-    margin-bottom:40px;
-}
-
-header h1{
-    font-size:34px;
-    font-weight:500;
-    letter-spacing:1px;
-}
-
-header span{
-    color:var(--accent);
+    margin-bottom:20px;
 }
 
 /* ===== TRUST BAR ===== */
-.trust-bar{
+.trust{
     background:white;
     padding:35px 20px;
     display:flex;
     justify-content:center;
     gap:60px;
     flex-wrap:wrap;
-    text-align:center;
-    border-bottom:1px solid #e5e5e5;
+    border-bottom:1px solid #e6e6e6;
 }
 
-.trust-bar div{
+.trust div{
     font-weight:500;
     color:#444;
 }
 
 /* ===== SECTIONS ===== */
 section{
-    max-width:1000px;
-    margin:100px auto;
+    max-width:1050px;
+    margin:110px auto;
     padding:0 20px;
 }
 
-section h2{
-    font-size:28px;
+h2{
+    font-size:30px;
     margin-bottom:20px;
 }
 
-section p{
-    max-width:750px;
+p{
+    max-width:760px;
     color:#444;
 }
 
@@ -93,20 +85,20 @@ section p{
 
 .service{
     background:white;
-    padding:35px;
-    border-radius:12px;
-    border-left:4px solid var(--accent);
+    padding:38px;
+    border-radius:14px;
+    border-left:5px solid var(--accent);
 }
 
 /* ===== REVIEWS ===== */
 .reviews{
     background:#fafafa;
-    padding:90px 20px;
+    padding:100px 20px;
 }
 
 .review-grid{
-    max-width:1000px;
-    margin:0 auto;
+    max-width:1050px;
+    margin:auto;
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:40px;
@@ -115,32 +107,22 @@ section p{
 .review{
     background:white;
     padding:32px;
-    border-radius:12px;
+    border-radius:14px;
     border:1px solid #eaeaea;
 }
 
-.review-header{
-    margin-bottom:10px;
-}
-
-.review-header strong{
+.review strong{
     display:block;
-    font-weight:600;
 }
 
-.review-header span{
+.review span{
     font-size:13px;
     color:var(--muted);
 }
 
 .stars{
     color:var(--accent);
-    margin:8px 0;
-}
-
-.review p{
-    font-size:15px;
-    color:#444;
+    margin:10px 0;
 }
 
 /* ===== PROCESS ===== */
@@ -155,7 +137,7 @@ section p{
     background:var(--dark2);
     color:white;
     padding:30px;
-    border-radius:12px;
+    border-radius:14px;
 }
 
 .step span{
@@ -178,7 +160,7 @@ section p{
 
 /* ===== FOOTER ===== */
 footer{
-    background:#0b0b0b;
+    background:#0a0a0a;
     color:#777;
     text-align:center;
     padding:25px;
@@ -191,15 +173,16 @@ footer{
     bottom:20px;
     background:#25d366;
     color:white;
-    padding:14px 22px;
+    padding:15px 24px;
     border-radius:40px;
     text-decoration:none;
     font-weight:500;
-    box-shadow:0 8px 25px rgba(0,0,0,.3);
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
 
+/* ===== MOBILE ===== */
 @media(max-width:600px){
-    header h1{font-size:26px;}
+    .logo{width:300px;}
 }
 </style>
 </head>
@@ -207,39 +190,37 @@ footer{
 <body>
 
 <header>
-    <img src="file_000000004bdc71f4a31694a061ba914a.png"
+    <img src="file_0000000041b07243b15f2939a319b276.png"
          alt="Berkan’s Opperdiensten logo"
          class="logo">
-    <h1>Berkan’s <span>Opperdiensten</span></h1>
 </header>
 
-<div class="trust-bar">
+<div class="trust">
     <div>Actief sinds 2019</div>
     <div>Professioneel ZZP-bedrijf</div>
-    <div>Net & gecontroleerd sloopwerk</div>
+    <div>Schoon & gecontroleerd sloopwerk</div>
 </div>
 
 <section>
-    <h2>Professioneel sloopwerk zonder risico’s</h2>
+    <h2>Professioneel sloopwerk</h2>
     <p>
-        Sloopwerk is meer dan alleen breken. Het vraagt inzicht, controle en ervaring.
-        Berkan’s Opperdiensten is gespecialiseerd in renovatiesloop voor woningen
-        en bedrijfspanden. Elk project wordt zorgvuldig uitgevoerd met oog voor
-        veiligheid en nette oplevering.
+        Berkan’s Opperdiensten is gespecialiseerd in gecontroleerd sloopwerk
+        voor renovatieprojecten. Van badkamers en keukens tot complete woningen.
+        Elk project wordt veilig, netjes en professioneel uitgevoerd.
     </p>
 
     <div class="services">
         <div class="service">
             <strong>Renovatiesloop</strong><br>
-            Gericht slopen waarbij constructies intact blijven.
+            Gericht slopen zonder onnodige schade.
         </div>
         <div class="service">
             <strong>Badkamer & keuken</strong><br>
-            Voorbereiding voor installateurs en aannemers.
+            Klaar voor installateurs en aannemers.
         </div>
         <div class="service">
             <strong>Woning strippen</strong><br>
-            Volledig strippen voor renovatie of verbouwing.
+            Volledig en schoon opgeleverd.
         </div>
     </div>
 </section>
@@ -248,42 +229,24 @@ footer{
     <div class="review-grid">
 
         <div class="review">
-            <div class="review-header">
-                <strong>Mark Jansen</strong>
-                <span>Particulier · Badkamer renovatie</span>
-            </div>
+            <strong>Mark Jansen</strong>
+            <span>Badkamer renovatie</span>
             <div class="stars">★★★★★</div>
-            <p>
-                Berkan heeft onze badkamer gesloopt voor de renovatie.
-                Werkte rustig en netjes en hield rekening met leidingen.
-                Alles schoon achtergelaten, fijne samenwerking.
-            </p>
+            Netjes gewerkt, goede communicatie en alles schoon achtergelaten.
         </div>
 
         <div class="review">
-            <div class="review-header">
-                <strong>Ahmed El H.</strong>
-                <span>Aannemer · Renovatieproject</span>
-            </div>
+            <strong>Ahmed El H.</strong>
+            <span>Aannemer</span>
             <div class="stars">★★★★★</div>
-            <p>
-                Werk regelmatig samen met Berkan.
-                Betrouwbaar, komt afspraken na en werkt zonder gedoe.
-                Ideaal voor renovatieklussen.
-            </p>
+            Betrouwbare ZZP’er. Werkt rustig en professioneel.
         </div>
 
         <div class="review">
-            <div class="review-header">
-                <strong>Linda Vermeer</strong>
-                <span>Particulier · Keuken sloop</span>
-            </div>
+            <strong>Linda Vermeer</strong>
+            <span>Keuken sloop</span>
             <div class="stars">★★★★☆</div>
-            <p>
-                Keuken netjes gesloopt en alles goed afgevoerd.
-                Geen schade aan de rest van de woning.
-                Zeker tevreden.
-            </p>
+            Alles volgens afspraak uitgevoerd. Tevreden.
         </div>
 
     </div>
@@ -292,15 +255,15 @@ footer{
 <section>
     <h2>Onze werkwijze</h2>
     <div class="process">
-        <div class="step"><span>1.</span><br>Inventarisatie & overleg</div>
-        <div class="step"><span>2.</span><br>Veilig en gecontroleerd slopen</div>
-        <div class="step"><span>3.</span><br>Afvoer van materialen</div>
+        <div class="step"><span>1.</span><br>Inventarisatie</div>
+        <div class="step"><span>2.</span><br>Gecontroleerd slopen</div>
+        <div class="step"><span>3.</span><br>Afvoer materiaal</div>
         <div class="step"><span>4.</span><br>Schoon opleveren</div>
     </div>
 </section>
 
 <div class="cta">
-    <h2>Vrijblijvende offerte aanvragen</h2>
+    <h2>Vrijblijvende offerte</h2>
     <p>Neem contact op voor professioneel sloopwerk</p>
     <p>📞 06-XXXXXXXX</p>
 </div>
