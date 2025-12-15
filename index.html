@@ -4,129 +4,185 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Spouwmuur & Isolatie Specialist | Berkan Opperdiensten</title>
+<title>Berkan Opperdiensten | Industrial Bouw & Isolatie</title>
+<meta name="description" content="Berkan Opperdiensten – spouwmuur, isolatie, sloop en renovatie sinds 2019. Eenmanszaak. Rauw vakmanschap.">
 
-<meta name="description" content="Berkan Opperdiensten is een eenmanszaak gespecialiseerd in spouwmuurwerk, isolatie, sloop en renovatie sinds 2019. Eerlijk advies, vakmanschap en duidelijke afspraken.">
-<meta name="robots" content="index, follow">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
---dark:#0b1220;
---dark2:#111827;
+--black:#070707;
+--steel:#0f172a;
 --gold:#c9a227;
---light:#f8fafc;
---gray:#475569;
+--gray:#9ca3af;
+--white:#f9fafb;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:var(--light);color:var(--dark);line-height:1.8}
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+background:var(--black);
+color:var(--white);
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
+}
+
+/* LOADING SCREEN */
+#loader{
+position:fixed;
+inset:0;
+background:radial-gradient(circle at center,#020617,#000);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:99999;
+}
+.loader-inner{
+text-align:center;
+animation:pulse 2s infinite;
+}
+.loader-inner img{
+height:120px;
+filter:drop-shadow(0 0 30px rgba(201,162,39,.5));
+}
+@keyframes pulse{
+0%{transform:scale(1);opacity:.6}
+50%{transform:scale(1.05);opacity:1}
+100%{transform:scale(1);opacity:.6}
+}
+
+/* NOISE */
+body::after{
+content:"";
+position:fixed;
+inset:0;
+background:url('https://grainy-gradients.vercel.app/noise.svg');
+opacity:.05;
+pointer-events:none;
+z-index:9999;
+}
 
 /* NAV */
 nav{
 position:fixed;
-top:0;
-width:100%;
-background:white;
-border-bottom:1px solid #e5e7eb;
+top:0;width:100%;
+background:rgba(5,5,5,.85);
+backdrop-filter:blur(8px);
+border-bottom:1px solid rgba(255,255,255,.05);
 z-index:1000;
 }
-.nav-inner{
-max-width:1200px;
+.nav{
+max-width:1400px;
 margin:auto;
-padding:16px 20px;
+padding:20px 28px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
-nav img{
-height:90px; /* extra groot logo */
+.nav img{
+height:95px;
+filter:drop-shadow(0 0 20px rgba(201,162,39,.25));
+transition:.4s;
 }
-nav a{
-margin-left:30px;
+.nav img:hover{transform:scale(1.05)}
+.nav a{
+margin-left:36px;
+color:var(--white);
 text-decoration:none;
-color:var(--dark);
+letter-spacing:.1em;
 font-weight:500;
+position:relative;
 }
-nav a:hover{color:var(--gold)}
+.nav a::after{
+content:"";
+position:absolute;
+left:0;bottom:-6px;
+width:0;height:2px;
+background:var(--gold);
+transition:.3s;
+}
+.nav a:hover::after{width:100%}
 
 /* HERO */
 header{
 height:100vh;
 position:relative;
-overflow:hidden;
 }
 header video{
 position:absolute;
-top:50%;
-left:50%;
-min-width:100%;
-min-height:100%;
-transform:translate(-50%,-50%);
+inset:0;
+width:100%;
+height:100%;
 object-fit:cover;
-filter:brightness(.45);
+filter:brightness(.3) contrast(1.15);
 }
 .hero-overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(120deg,rgba(11,18,32,.9),rgba(0,0,0,.55));
+background:
+linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.6)),
+radial-gradient(circle at 30% 80%,rgba(201,162,39,.18),transparent 60%);
 }
 .hero{
 position:relative;
 z-index:2;
-max-width:1200px;
+max-width:1400px;
 margin:auto;
-height:100%;
-padding:180px 20px;
-display:flex;
-align-items:center;
-}
-.hero-content{
-max-width:720px;
-animation:heroIn 1.2s ease forwards;
-}
-@keyframes heroIn{
-from{opacity:0;transform:translateY(40px)}
-to{opacity:1;transform:none}
+padding:230px 28px;
 }
 .hero h1{
-font-size:3.2rem;
-color:white;
-margin-bottom:22px;
+font-family:'Oswald',sans-serif;
+font-size:4.2rem;
+letter-spacing:.15em;
+text-transform:uppercase;
+margin-bottom:26px;
+animation:slideUp 1.2s ease forwards;
+}
+@keyframes slideUp{
+from{opacity:0;transform:translateY(60px)}
+to{opacity:1;transform:none}
 }
 .hero p{
+max-width:720px;
 color:#e5e7eb;
-font-size:1.2rem;
-margin-bottom:38px;
+font-size:1.15rem;
+margin-bottom:44px;
 }
-.btn{
+.cta{
+display:inline-block;
+padding:18px 52px;
+border:2px solid var(--gold);
+color:var(--gold);
+text-decoration:none;
+font-weight:600;
+letter-spacing:.15em;
+text-transform:uppercase;
+transition:.35s;
+}
+.cta:hover{
 background:var(--gold);
 color:black;
-padding:18px 42px;
-border-radius:6px;
-font-weight:600;
-text-decoration:none;
-display:inline-block;
-box-shadow:0 10px 30px rgba(201,162,39,.35);
+box-shadow:0 0 40px rgba(201,162,39,.6);
 }
 
-/* SECTIONS */
+/* SECTION */
 section{
-max-width:1200px;
+max-width:1400px;
 margin:auto;
-padding:120px 20px;
+padding:140px 28px;
 }
-h2{
-font-size:2.5rem;
-margin-bottom:45px;
+.section-title{
+font-family:'Oswald',sans-serif;
+font-size:3rem;
+letter-spacing:.18em;
+text-transform:uppercase;
+margin-bottom:60px;
 }
-p{color:var(--gray)}
 
 /* REVEAL */
 .reveal{
 opacity:0;
-transform:translateY(50px);
+transform:translateY(60px);
 transition:1s ease;
 }
 .reveal.show{
@@ -138,157 +194,138 @@ transform:none;
 .services{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:35px;
+gap:40px;
 }
 .service{
-background:white;
-padding:40px;
-border-radius:14px;
-border:1px solid #e5e7eb;
-}
-
-/* INFO */
-.info{
-background:white;
+background:linear-gradient(145deg,#020617,#020617);
+border:1px solid rgba(255,255,255,.05);
 padding:55px;
-border-radius:16px;
-border:1px solid #e5e7eb;
+position:relative;
+overflow:hidden;
+}
+.service::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(120deg,transparent,rgba(201,162,39,.18),transparent);
+transform:translateX(-120%);
+transition:.6s;
+}
+.service:hover::before{transform:translateX(120%)}
+.service h3{
+font-family:'Oswald',sans-serif;
+letter-spacing:.12em;
+margin-bottom:14px;
 }
 
-/* PROCESS */
-.process{
+/* SPLIT */
+.split{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:1.2fr 1fr;
+gap:90px;
+align-items:center;
+}
+.split-box{
+background:#020617;
+border-left:5px solid var(--gold);
+padding:60px;
+}
+
+/* PROJECTS */
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:30px;
 }
-.step{
-background:#f1f5f9;
-padding:30px;
-border-radius:12px;
+.project{
+position:relative;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.06);
 }
-.step strong{
-display:block;
-margin-bottom:10px;
+.project img{
+width:100%;
+height:260px;
+object-fit:cover;
+filter:grayscale(.4);
+transition:.6s;
+}
+.project:hover img{
+transform:scale(1.12);
+filter:none;
+}
+.project span{
+position:absolute;
+bottom:18px;
+left:18px;
+font-family:'Oswald',sans-serif;
+letter-spacing:.1em;
 }
 
 /* REVIEWS */
 .reviews{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:36px;
 }
 .review{
-background:white;
-padding:35px;
-border-radius:14px;
-border-left:6px solid var(--gold);
-}
-.review span{
-display:block;
-margin-top:15px;
-font-weight:600;
-}
-
-/* PROJECTS */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-.gallery figure{
-background:white;
-border-radius:14px;
-overflow:hidden;
-border:1px solid #e5e7eb;
-}
-.gallery img{
-width:100%;
-height:230px;
-object-fit:cover;
-}
-.gallery figcaption{
-padding:14px;
-font-size:.95rem;
-background:#f8fafc;
+background:#020617;
+border-left:5px solid var(--gold);
+padding:40px;
+font-style:italic;
 }
 
 /* CONTACT */
 .contact{
-background:var(--dark2);
-color:white;
-border-radius:18px;
-padding:100px 40px;
+background:radial-gradient(circle at top,rgba(201,162,39,.2),transparent 65%);
 text-align:center;
 }
-.contact p{color:#e5e7eb}
 .contact a{
-color:var(--gold);
 display:block;
-margin-top:12px;
-font-size:1.15rem;
+margin-top:18px;
+color:var(--gold);
 text-decoration:none;
-}
-
-/* FORM */
-form{
-max-width:600px;
-margin:40px auto 0;
-display:grid;
-gap:15px;
-}
-input,textarea{
-padding:15px;
-border-radius:6px;
-border:1px solid #cbd5f5;
-}
-button{
-background:var(--gold);
-border:none;
-padding:16px;
-font-weight:600;
-cursor:pointer;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:30px;
-color:#64748b;
+font-size:1.15rem;
 }
 
 /* WHATSAPP */
 .whatsapp{
 position:fixed;
-right:25px;
-bottom:25px;
-width:72px;
-height:72px;
+right:28px;
+bottom:28px;
+width:72px;height:72px;
 background:#25D366;
-color:white;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
 font-size:34px;
-box-shadow:0 12px 35px rgba(0,0,0,.4);
+color:white;
 z-index:1000;
+box-shadow:0 0 40px rgba(37,211,102,.6);
 }
 
 @media(max-width:900px){
-.hero h1{font-size:2.2rem}
+.hero h1{font-size:2.5rem}
+.split{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
 
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-inner">
+    <img src="bologo1.png" alt="Berkan Opperdiensten">
+  </div>
+</div>
+
 <nav>
-<div class="nav-inner">
-<img src="bologo1.png" alt="Berkan Opperdiensten">
+<div class="nav">
+<img src="bologo1.png">
 <div>
 <a href="#diensten">Diensten</a>
-<a href="#uitleg">Waarom isolatie</a>
-<a href="#proces">Werkwijze</a>
+<a href="#over">Over</a>
 <a href="#projecten">Projecten</a>
 <a href="#contact">Contact</a>
 </div>
@@ -302,129 +339,84 @@ z-index:1000;
 <div class="hero-overlay"></div>
 
 <div class="hero">
-<div class="hero-content">
-<h1>Betrouwbaar spouw- en isolatiewerk sinds 2019</h1>
+<h1>RAW<br>INDUSTRIAL<br>CRAFTSMANSHIP</h1>
 <p>
-Berkan Opperdiensten is een eenmanszaak gespecialiseerd in spouwmuurwerk,
-isolatie, sloop en renovatie. U heeft direct contact met de uitvoerder,
-korte lijnen en duidelijke afspraken.
+Spouwmuurwerk, isolatie, sloop en renovatie sinds 2019.
+Eén aanspreekpunt. Geen bullshit. Alleen strak werk.
 </p>
-<a href="#contact" class="btn">Vrijblijvend contact opnemen</a>
-</div>
+<a href="#contact" class="cta">Contact opnemen</a>
 </div>
 </header>
 
 <section id="diensten" class="reveal">
-<h2>Onze werkzaamheden</h2>
+<h2 class="section-title">Diensten</h2>
 <div class="services">
-<div class="service">
-<h3>Spouwmuur werkzaamheden</h3>
-<p>
-Goed spouwmuurwerk beschermt uw woning tegen vocht, kou en warmteverlies.
-Ik werk zorgvuldig en kijk per woning wat echt nodig is.
-</p>
-</div>
-<div class="service">
-<h3>Isolatiewerkzaamheden</h3>
-<p>
-Met goede isolatie bespaart u direct op energiekosten en verhoogt u het
-wooncomfort. Een investering die zichzelf terugverdient.
-</p>
-</div>
-<div class="service">
-<h3>Sloop & renovatie</h3>
-<p>
-Kleine sloopklussen en renovatiewerkzaamheden, veilig en netjes uitgevoerd,
-met aandacht voor afwerking.
-</p>
-</div>
+<div class="service"><h3>Spouwmuurwerk</h3><p>Bescherming tegen vocht en kou.</p></div>
+<div class="service"><h3>Isolatie</h3><p>Lagere energiekosten en comfort.</p></div>
+<div class="service"><h3>Sloop & Renovatie</h3><p>Strak, veilig en gecontroleerd.</p></div>
 </div>
 </section>
 
-<section id="uitleg" class="reveal">
-<h2>Waarom spouw en isolatie een slimme keuze zijn</h2>
-<div class="info">
-<p>
-Veel woningen verliezen onnodig warmte via slecht geïsoleerde muren.
-Door uw spouwmuur te laten controleren en waar nodig te isoleren,
-verlaagt u uw energierekening, voorkomt u vochtproblemen en
-verhoogt u de waarde van uw woning.
-</p>
-<p>
-Als eenmanszaak kijk ik persoonlijk naar uw situatie en geef ik
-eerlijk advies, zonder verkooppraatjes.
+<section id="over" class="reveal">
+<div class="split">
+<div>
+<h2 class="section-title">Waarom Berkan</h2>
+<p class="muted">
+Als eenmanszaak heeft u direct contact met degene die het werk uitvoert.
+Geen lagen. Geen verrassingen.
 </p>
 </div>
-</section>
-
-<section id="proces" class="reveal">
-<h2>Mijn werkwijze</h2>
-<div class="process">
-<div class="step"><strong>1. Kennismaking</strong>Persoonlijk contact en inspectie</div>
-<div class="step"><strong>2. Advies</strong>Eerlijke uitleg en duidelijke offerte</div>
-<div class="step"><strong>3. Uitvoering</strong>Netjes en vakkundig werk</div>
-<div class="step"><strong>4. Oplevering</strong>Alles schoon en volgens afspraak</div>
-</div>
-</section>
-
-<section class="reveal">
-<h2>Klantervaringen</h2>
-<div class="reviews">
-<div class="review">
-“Fijn direct contact en duidelijke uitleg. Het verschil in warmte was
-vrij snel merkbaar.”
-<span>— Particuliere woningeigenaar</span>
-</div>
-<div class="review">
-“Netjes gewerkt en afspraken nagekomen. Prettige samenwerking.”
-<span>— Klant uit Nederland</span>
-</div>
-<div class="review">
-“Betrouwbaar en professioneel. Geen poespas.”
-<span>— Vaste klant</span>
+<div class="split-box">
+✓ Sinds 2019 actief<br>
+✓ Eén aanspreekpunt<br>
+✓ Eerlijk advies<br>
+✓ Netjes opgeleverd
 </div>
 </div>
 </section>
 
 <section id="projecten" class="reveal">
-<h2>Recente projecten</h2>
-<div class="gallery">
-<figure><img src="proj1.jpg"><figcaption>Spouwmuur werkzaamheden</figcaption></figure>
-<figure><img src="proj2.jpg"><figcaption>Isolatiewerkzaamheden</figcaption></figure>
-<figure><img src="proj3.jpg"><figcaption>Renovatie werkzaamheden</figcaption></figure>
+<h2 class="section-title">Projecten</h2>
+<div class="projects">
+<div class="project"><img src="proj1.jpg"><span>Spouw</span></div>
+<div class="project"><img src="proj2.jpg"><span>Isolatie</span></div>
+<div class="project"><img src="proj3.jpg"><span>Renovatie</span></div>
+</div>
+</section>
+
+<section class="reveal">
+<h2 class="section-title">Ervaringen</h2>
+<div class="reviews">
+<div class="review">“Direct verschil merkbaar.”</div>
+<div class="review">“Netjes en professioneel.”</div>
+<div class="review">“Geen poespas, goed werk.”</div>
 </div>
 </section>
 
 <section id="contact" class="contact reveal">
-<h2>Contact opnemen</h2>
-<p>
-Wilt u weten wat ik voor uw woning kan betekenen?
-Neem vrijblijvend contact op voor advies of een offerte.
-</p>
-
-<form>
-<input type="text" placeholder="Naam" required>
-<input type="email" placeholder="E-mail" required>
-<textarea placeholder="Uw vraag of situatie"></textarea>
-<button type="submit">Verstuur bericht</button>
-</form>
-
-<a href="tel:0681776810">📞 06 8177 6810</a>
-<a href="mailto:berkanopperdiensten@gmail.com">✉️ berkanopperdiensten@gmail.com</a>
+<h2 class="section-title">Contact</h2>
+<a href="tel:0681776810">06 8177 6810</a>
+<a href="mailto:berkanopperdiensten@gmail.com">berkanopperdiensten@gmail.com</a>
 </section>
 
-<footer>
-© 2025 Berkan Opperdiensten – Eenmanszaak | Site made by VormIQ | Vakmanschap sinds 2019
+<footer style="text-align:center;padding:40px;color:#6b7280">
+© 2025 Berkan Opperdiensten
 </footer>
 
-<a class="whatsapp" href="https://wa.me/31681776810" target="_blank">💬</a>
+<a class="whatsapp" href="https://wa.me/31681776810">💬</a>
 
 <script>
+/* LOADER */
+window.addEventListener("load",()=>{
+setTimeout(()=>document.getElementById("loader").style.display="none",800);
+});
+
+/* REVEAL */
 const reveals=document.querySelectorAll('.reveal');
 window.addEventListener('scroll',()=>{
-const trigger=window.innerHeight*0.85;
+const t=window.innerHeight*0.85;
 reveals.forEach(el=>{
-if(el.getBoundingClientRect().top<trigger){
+if(el.getBoundingClientRect().top<t){
 el.classList.add('show');
 }
 });
