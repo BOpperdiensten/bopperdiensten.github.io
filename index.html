@@ -23,71 +23,86 @@ body{background:var(--light);color:var(--dark2);overflow-x:hidden}
 
 /* NAV */
 nav{
-position:fixed;
-top:0;width:100%;
-background:rgba(11,15,20,.95);
+position:fixed;top:0;width:100%;
+background:rgba(11,15,20,.85);
+backdrop-filter:blur(10px);
 z-index:1000;
 }
 .nav-inner{
 max-width:1200px;margin:auto;
 padding:15px 20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+display:flex;justify-content:space-between;align-items:center;
 }
-nav img{height:45px}
+nav img{
+height:48px;
+animation:logoPulse 4s infinite;
+filter:drop-shadow(0 0 12px rgba(201,162,39,.6));
+}
+@keyframes logoPulse{
+0%,100%{transform:scale(1)}
+50%{transform:scale(1.05)}
+}
 nav a{
-color:white;text-decoration:none;
-margin-left:25px;font-weight:500;
+color:white;text-decoration:none;margin-left:25px;font-weight:500;
 }
 nav a:hover{color:var(--gold)}
 
-/* HERO */
+/* VIDEO HERO */
 header{
 height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
-url('proj1.jpg');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
+position:relative;
+overflow:hidden;
+}
+header video{
+position:absolute;
+top:50%;left:50%;
+min-width:100%;min-height:100%;
+transform:translate(-50%,-50%);
+object-fit:cover;
+filter:brightness(.55);
 }
 .hero{
+position:relative;
+z-index:2;
 max-width:1200px;
 margin:auto;
 padding:20px;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
 color:white;
-animation:fadeUp 1.2s ease;
+animation:fadeUp 1.4s ease;
 }
 .hero h1{
-font-size:3.2rem;
+font-size:3.5rem;
 margin-bottom:20px;
 }
 .hero p{
 max-width:650px;
-font-size:1.2rem;
-margin-bottom:30px;
+font-size:1.25rem;
+margin-bottom:35px;
 }
 .btn{
 background:var(--gold);
 color:black;
-padding:15px 40px;
+padding:16px 44px;
 border-radius:50px;
 font-weight:700;
 text-decoration:none;
+box-shadow:0 10px 30px rgba(201,162,39,.5);
 }
 
 /* ANIMATIONS */
 @keyframes fadeUp{
-from{opacity:0;transform:translateY(60px)}
+from{opacity:0;transform:translateY(80px)}
 to{opacity:1;transform:translateY(0)}
 }
 
 .reveal{
 opacity:0;
-transform:translateY(80px);
-transition:1s ease;
+transform:translateY(90px);
+transition:1.2s ease;
 }
 .reveal.active{
 opacity:1;
@@ -96,60 +111,70 @@ transform:none;
 
 /* SECTIONS */
 section{
-padding:100px 20px;
+padding:120px 20px;
 max-width:1200px;
 margin:auto;
 }
 h2{
 text-align:center;
-font-size:2.6rem;
-margin-bottom:60px;
+font-size:2.8rem;
+margin-bottom:70px;
 }
 
 /* SERVICES */
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:35px;
 }
 .service{
 background:white;
-padding:40px;
-border-radius:18px;
-box-shadow:0 15px 40px rgba(0,0,0,.1);
+padding:45px;
+border-radius:22px;
+box-shadow:0 25px 60px rgba(0,0,0,.12);
+transition:.4s ease;
 }
+.service:hover{transform:translateY(-10px)}
 .service i{
-font-size:45px;
+font-size:48px;
 color:var(--gold);
-margin-bottom:20px;
+margin-bottom:22px;
 }
 
 /* PROJECTEN */
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
 }
 .gallery img{
 width:100%;
-height:260px;
+height:300px;
 object-fit:cover;
-border-radius:18px;
-box-shadow:0 20px 50px rgba(0,0,0,.25);
-transform:scale(.9);
+border-radius:24px;
+box-shadow:0 30px 70px rgba(0,0,0,.35);
 opacity:0;
-transition:1s ease;
+transform:scale(.8);
+transition:1.3s ease;
 }
 .gallery img.show{
 opacity:1;
 transform:scale(1);
 }
 
+/* LOGO CARD */
+.gallery img.logo{
+object-fit:contain;
+background:linear-gradient(145deg,#0b0f14,#1f2933);
+padding:60px;
+height:340px;
+}
+
 /* ABOUT */
 .about{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:60px;
+gap:70px;
 align-items:center;
 }
 
@@ -158,7 +183,7 @@ align-items:center;
 background:var(--dark2);
 color:white;
 text-align:center;
-border-radius:30px;
+border-radius:40px;
 }
 .contact a{
 color:var(--gold);
@@ -168,7 +193,7 @@ text-decoration:none;
 font-size:1.1rem;
 }
 form{
-max-width:500px;
+max-width:520px;
 margin:30px auto;
 display:grid;
 gap:15px;
@@ -191,28 +216,25 @@ footer{
 background:black;
 color:#aaa;
 text-align:center;
-padding:20px;
+padding:25px;
 }
 
 /* WHATSAPP */
 .whatsapp{
 position:fixed;
-right:25px;
-bottom:25px;
-width:65px;height:65px;
+right:25px;bottom:25px;
+width:70px;height:70px;
 background:#25D366;
 color:white;
 border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:32px;
-box-shadow:0 10px 30px rgba(0,0,0,.4);
+display:flex;align-items:center;justify-content:center;
+font-size:34px;
+box-shadow:0 15px 40px rgba(0,0,0,.5);
 z-index:1000;
 }
 
-@media(max-width:800px){
-.hero h1{font-size:2.2rem}
+@media(max-width:850px){
+.hero h1{font-size:2.3rem}
 .about{grid-template-columns:1fr}
 }
 </style>
@@ -233,9 +255,13 @@ z-index:1000;
 </nav>
 
 <header>
+<video autoplay muted loop playsinline>
+<source src="Snapchat-1652591305.mp4" type="video/mp4">
+</video>
+
 <div class="hero">
 <h1>Premium Spouw, Isolatie & Renovatie</h1>
-<p>Berkan Opperdiensten levert sinds 2019 vakmanschap zonder compromis. Kwaliteit, kracht en vertrouwen.</p>
+<p>Sinds 2019 staat Berkan Opperdiensten voor kracht, precisie en compromisloos vakmanschap.</p>
 <a href="#contact" class="btn">Vraag offerte aan</a>
 </div>
 </header>
@@ -243,10 +269,10 @@ z-index:1000;
 <section id="diensten" class="reveal">
 <h2>Onze Diensten</h2>
 <div class="services">
-<div class="service"><i class="fa-solid fa-building"></i><h3>Spouwmuur</h3><p>Hoogwaardige spouwoplossingen.</p></div>
-<div class="service"><i class="fa-solid fa-temperature-high"></i><h3>Isolatie</h3><p>Energiezuinig & duurzaam.</p></div>
-<div class="service"><i class="fa-solid fa-hammer"></i><h3>Sloop</h3><p>Veilig en professioneel.</p></div>
-<div class="service"><i class="fa-solid fa-house"></i><h3>Renovatie</h3><p>Van ruw tot perfect.</p></div>
+<div class="service"><i class="fa-solid fa-building"></i><h3>Spouwmuur</h3><p>Duurzame spouwoplossingen.</p></div>
+<div class="service"><i class="fa-solid fa-temperature-high"></i><h3>Isolatie</h3><p>Energiezuinig & toekomstgericht.</p></div>
+<div class="service"><i class="fa-solid fa-hammer"></i><h3>Sloop</h3><p>Veilig en gecontroleerd.</p></div>
+<div class="service"><i class="fa-solid fa-house"></i><h3>Renovatie</h3><p>Van ruw naar perfect.</p></div>
 </div>
 </section>
 
@@ -255,7 +281,7 @@ z-index:1000;
 <div class="gallery">
 <img src="proj1.jpg">
 <img src="proj2.jpg">
-<img src="proj3.jpg">
+<img src="bologo1.png" class="logo">
 </div>
 </section>
 
@@ -263,9 +289,9 @@ z-index:1000;
 <h2>Over Ons</h2>
 <div class="about">
 <div>
-<p>Wij combineren ervaring, precisie en passie. Sinds 2019 bouwen wij aan duurzame resultaten waar klanten trots op zijn.</p>
+<p>Wij combineren ervaring, passie en precisie. Elk project wordt uitgevoerd alsof het ons eigen werk is.</p>
 </div>
-<img src="proj2.jpg" style="width:100%;border-radius:20px">
+<img src="proj2.jpg" style="width:100%;border-radius:30px">
 </div>
 </section>
 
@@ -296,14 +322,16 @@ const imgs=document.querySelectorAll('.gallery img');
 window.addEventListener('scroll',()=>{
 const trigger=window.innerHeight*0.85;
 
-reveals.forEach(r=>{
-const top=r.getBoundingClientRect().top;
-if(top<trigger) r.classList.add('active');
+reveals.forEach(el=>{
+if(el.getBoundingClientRect().top<trigger){
+el.classList.add('active');
+}
 });
 
 imgs.forEach(img=>{
-const top=img.getBoundingClientRect().top;
-if(top<trigger) img.classList.add('show');
+if(img.getBoundingClientRect().top<trigger){
+img.classList.add('show');
+}
 });
 });
 </script>
