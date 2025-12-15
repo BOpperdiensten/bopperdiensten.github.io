@@ -2,109 +2,176 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Bopperdiensten – Sloopwerkzaamheden</title>
+    <title>Berkan’s Opperdiensten | Sloopwerkzaamheden</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #0f0f0f;
+            color: #eaeaea;
+            line-height: 1.6;
         }
-        header {
-            background-color: #1f1f1f;
-            color: #fff;
-            padding: 40px 20px;
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #ff7a00, #ff3300);
+            padding: 80px 20px;
             text-align: center;
+            color: #fff;
         }
-        header h1 {
-            margin: 0;
-            font-size: 36px;
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
-        header p {
-            margin-top: 10px;
-            font-size: 18px;
+
+        .hero p {
+            font-size: 20px;
+            font-weight: 500;
         }
+
+        /* SECTIONS */
         section {
-            max-width: 900px;
-            margin: 40px auto;
-            background: #fff;
+            max-width: 1000px;
+            margin: 50px auto;
             padding: 30px;
-            border-radius: 8px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
         }
+
         h2 {
-            color: #111;
+            color: #ff7a00;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-size: 28px;
         }
+
         ul {
             padding-left: 20px;
         }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* STATS */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-box {
+            background: #111;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .stat-box h3 {
+            font-size: 36px;
+            color: #ff7a00;
+            margin: 0;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: linear-gradient(135deg, #1f1f1f, #000);
+            border: 1px solid #333;
+        }
+
+        .contact p {
+            font-size: 18px;
+        }
+
+        /* FOOTER */
         footer {
-            background-color: #1f1f1f;
-            color: #fff;
+            background-color: #000;
+            color: #777;
             text-align: center;
             padding: 20px;
-            margin-top: 40px;
+            margin-top: 60px;
+            font-size: 14px;
         }
-        .contact {
-            background-color: #e9e9e9;
-            padding: 20px;
-            border-radius: 6px;
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 34px;
+            }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Bopperdiensten</h1>
-    <p>Professionele sloopwerkzaamheden – actief sinds 2019</p>
-</header>
+<!-- HERO -->
+<div class="hero">
+    <h1>Berkan’s Opperdiensten</h1>
+    <p>Stoer. Betrouwbaar. Professioneel sloopwerk sinds 2019.</p>
+</div>
 
+<!-- OVER ONS -->
 <section>
-    <h2>Over ons</h2>
+    <h2>Wie wij zijn</h2>
     <p>
-        Bopperdiensten is een zelfstandige onderneming (ZZP) die sinds 2019 actief is
-        in de sloopbranche. Wij zijn gespecialiseerd in veilige, efficiënte en
-        nauwkeurige sloopwerkzaamheden voor zowel particulieren als bedrijven.
+        Berkan’s Opperdiensten is een ervaren ZZP-bedrijf dat zich sinds 2019
+        specialiseert in professionele sloopwerkzaamheden.
+        Wij werken snel, veilig en met oog voor detail.
     </p>
 </section>
 
+<!-- DIENSTEN -->
 <section>
-    <h2>Onze diensten</h2>
+    <h2>Onze werkzaamheden</h2>
     <ul>
-        <li>Renovatiesloop</li>
+        <li>Renovatie- en totaalsloop</li>
         <li>Badkamer- en keukensloop</li>
-        <li>Woning- en pandensloop</li>
-        <li>Strip- en demontagewerkzaamheden</li>
-        <li>Afvoer van sloopafval</li>
+        <li>Strippen van woningen en bedrijfspanden</li>
+        <li>Handmatig en machinaal sloopwerk</li>
+        <li>Afvoer en opruiming van sloopafval</li>
     </ul>
 </section>
 
+<!-- STATS -->
 <section>
-    <h2>Waarom kiezen voor Bopperdiensten?</h2>
-    <ul>
-        <li>Meer dan 5 jaar ervaring</li>
-        <li>Betrouwbaar en professioneel</li>
-        <li>Netjes en veilig werken</li>
-        <li>Duidelijke communicatie</li>
-        <li>Flexibel inzetbaar</li>
-    </ul>
+    <h2>Waarom Berkan’s Opperdiensten</h2>
+    <div class="stats">
+        <div class="stat-box">
+            <h3>2019</h3>
+            <p>Actief sinds</p>
+        </div>
+        <div class="stat-box">
+            <h3>100%</h3>
+            <p>Betrouwbaar</p>
+        </div>
+        <div class="stat-box">
+            <h3>ZZP</h3>
+            <p>Persoonlijke aanpak</p>
+        </div>
+        <div class="stat-box">
+            <h3>✔</h3>
+            <p>Veilig & professioneel</p>
+        </div>
+    </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact">
     <h2>Contact</h2>
     <p>
-        Bent u op zoek naar een betrouwbare sloper voor uw project?
-        Neem gerust contact op voor een vrijblijvende offerte.
+        Op zoek naar een sterke en betrouwbare sloper?
+        Neem contact op voor een vrijblijvende offerte.
     </p>
     <p>
-        <strong>Telefoon:</strong> 06-XXXXXXXX<br>
-        <strong>E-mail:</strong> info@bopperdiensten.nl
+        <strong>📞 Telefoon:</strong> 06-XXXXXXXX<br>
+        <strong>✉️ E-mail:</strong> info@berkansopperdiensten.nl
     </p>
 </section>
 
 <footer>
-    <p>&copy; 2019–2025 Bopperdiensten | Alle rechten voorbehouden</p>
-</footer>
-
-</body>
-</html>
+    © 2019–2025 Berkan’s Opperdiensten | Sloop
