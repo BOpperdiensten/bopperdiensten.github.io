@@ -4,17 +4,15 @@
 <meta charset="UTF-8">
 <title>Berkan’s Opperdiensten | Professioneel Sloopwerk</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- FAVICON -->
 <link rel="icon" type="image/png" href="file_0000000041b07243b15f2939a319b276.png">
 
 <style>
 :root{
-    --dark:#0e0e0e;
-    --dark2:#1a1a1a;
+    --black:#0b0b0b;
+    --dark:#161616;
     --accent:#ff6a00;
-    --bg:#f2f2f2;
-    --text:#222;
+    --bg:#f4f4f4;
+    --text:#1e1e1e;
     --muted:#777;
 }
 
@@ -28,28 +26,44 @@ body{
     line-height:1.6;
 }
 
-/* ===== HEADER ===== */
-header{
-    background:linear-gradient(135deg,#0b0b0b,#1e1e1e);
+/* ===== HEADER / HERO ===== */
+.hero{
+    background:linear-gradient(180deg,#0b0b0b,#1a1a1a);
     color:white;
-    padding:110px 20px 130px;
+    padding:80px 20px 90px;
     text-align:center;
 }
 
 .logo{
-    width:420px;
-    max-width:90%;
-    margin-bottom:20px;
+    width:260px;
+    max-width:85%;
+    margin:0 auto 25px;
+    display:block;
 }
 
-/* ===== TRUST BAR ===== */
+.hero h1{
+    font-size:26px;
+    font-weight:600;
+    margin:0 0 15px;
+}
+
+.hero h1 span{color:var(--accent);}
+
+.hero p{
+    font-size:16px;
+    color:#cfcfcf;
+    max-width:420px;
+    margin:0 auto;
+}
+
+/* ===== TRUST ===== */
 .trust{
     background:white;
-    padding:35px 20px;
-    display:flex;
-    justify-content:center;
-    gap:60px;
-    flex-wrap:wrap;
+    padding:25px 20px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+    text-align:center;
     border-bottom:1px solid #e6e6e6;
 }
 
@@ -60,55 +74,75 @@ header{
 
 /* ===== SECTIONS ===== */
 section{
-    max-width:1050px;
-    margin:110px auto;
-    padding:0 20px;
+    padding:70px 20px;
+    max-width:1100px;
+    margin:auto;
 }
 
 h2{
-    font-size:30px;
-    margin-bottom:20px;
+    font-size:24px;
+    margin-bottom:15px;
 }
 
-p{
-    max-width:760px;
+section p{
+    font-size:16px;
     color:#444;
+    max-width:650px;
 }
 
 /* ===== SERVICES ===== */
 .services{
+    margin-top:35px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:40px;
-    margin-top:40px;
+    gap:25px;
 }
 
 .service{
     background:white;
-    padding:38px;
-    border-radius:14px;
-    border-left:5px solid var(--accent);
+    padding:28px;
+    border-left:4px solid var(--accent);
+    border-radius:10px;
+}
+
+.service strong{
+    display:block;
+    margin-bottom:6px;
+}
+
+/* ===== WHY ===== */
+.why{
+    background:var(--black);
+    color:white;
+}
+
+.why-grid{
+    margin-top:35px;
+    display:grid;
+    gap:20px;
+}
+
+.why-item{
+    background:var(--dark);
+    padding:24px;
+    border-radius:10px;
 }
 
 /* ===== REVIEWS ===== */
 .reviews{
-    background:#fafafa;
-    padding:100px 20px;
+    background:white;
 }
 
 .review-grid{
-    max-width:1050px;
-    margin:auto;
+    margin-top:35px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:40px;
+    gap:25px;
 }
 
 .review{
-    background:white;
-    padding:32px;
-    border-radius:14px;
-    border:1px solid #eaeaea;
+    background:#f9f9f9;
+    padding:26px;
+    border-left:4px solid #ddd;
+    border-radius:10px;
 }
 
 .review strong{
@@ -122,143 +156,149 @@ p{
 
 .stars{
     color:var(--accent);
-    margin:10px 0;
-}
-
-/* ===== PROCESS ===== */
-.process{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:30px;
-    margin-top:40px;
-}
-
-.step{
-    background:var(--dark2);
-    color:white;
-    padding:30px;
-    border-radius:14px;
-}
-
-.step span{
-    color:var(--accent);
-    font-weight:600;
+    margin:8px 0;
 }
 
 /* ===== CTA ===== */
 .cta{
-    background:var(--dark);
+    background:linear-gradient(180deg,#0b0b0b,#1a1a1a);
     color:white;
-    padding:90px 20px;
     text-align:center;
+    padding:70px 20px;
+}
+
+.cta h2{
+    font-size:26px;
 }
 
 .cta p{
-    color:#bbb;
-    font-size:18px;
+    font-size:17px;
+    color:#ccc;
 }
 
 /* ===== FOOTER ===== */
 footer{
-    background:#0a0a0a;
+    background:#080808;
     color:#777;
     text-align:center;
-    padding:25px;
+    padding:20px;
+    font-size:14px;
 }
 
 /* ===== WHATSAPP ===== */
 .whatsapp{
     position:fixed;
-    right:20px;
-    bottom:20px;
+    right:16px;
+    bottom:16px;
     background:#25d366;
     color:white;
-    padding:15px 24px;
+    padding:14px 20px;
     border-radius:40px;
     text-decoration:none;
-    font-weight:500;
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    font-weight:600;
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
 }
 
-/* ===== MOBILE ===== */
-@media(max-width:600px){
-    .logo{width:300px;}
+/* ===== DESKTOP ===== */
+@media(min-width:900px){
+    .hero{
+        padding:130px 20px 150px;
+    }
+
+    .logo{
+        width:420px;
+    }
+
+    .hero h1{
+        font-size:46px;
+    }
+
+    .hero p{
+        font-size:20px;
+    }
+
+    .trust{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .services{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .review-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    h2{
+        font-size:34px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <img src="file_0000000041b07243b15f2939a319b276.png"
-         alt="Berkan’s Opperdiensten logo"
-         class="logo">
-</header>
+<div class="hero">
+    <img src="file_0000000041b07243b15f2939a319b276.png" class="logo" alt="Berkan’s Opperdiensten">
+    <h1>Professioneel <span>sloopwerk</span></h1>
+    <p>Gecontroleerde renovatiesloop voor woningen, bedrijfspanden en aannemers.</p>
+</div>
 
 <div class="trust">
-    <div>Actief sinds 2019</div>
-    <div>Professioneel ZZP-bedrijf</div>
-    <div>Schoon & gecontroleerd sloopwerk</div>
+    <div>✔ Actief sinds 2019</div>
+    <div>✔ Ervaren ZZP’er</div>
+    <div>✔ Veilig & schoon</div>
 </div>
 
 <section>
-    <h2>Professioneel sloopwerk</h2>
+    <h2>Sloopwerk is precisiewerk</h2>
     <p>
-        Berkan’s Opperdiensten is gespecialiseerd in gecontroleerd sloopwerk
-        voor renovatieprojecten. Van badkamers en keukens tot complete woningen.
-        Elk project wordt veilig, netjes en professioneel uitgevoerd.
+        Wij slopen niet zomaar. We verwijderen gericht wat weg moet,
+        zodat vervolgwerk zonder problemen kan starten.
     </p>
 
     <div class="services">
-        <div class="service">
-            <strong>Renovatiesloop</strong><br>
-            Gericht slopen zonder onnodige schade.
-        </div>
-        <div class="service">
-            <strong>Badkamer & keuken</strong><br>
-            Klaar voor installateurs en aannemers.
-        </div>
-        <div class="service">
-            <strong>Woning strippen</strong><br>
-            Volledig en schoon opgeleverd.
-        </div>
+        <div class="service"><strong>Renovatiesloop</strong>Geen schade aan constructie</div>
+        <div class="service"><strong>Badkamers & keukens</strong>Klaar voor installateurs</div>
+        <div class="service"><strong>Woning strippen</strong>Schoon opgeleverd</div>
     </div>
 </section>
 
-<div class="reviews">
-    <div class="review-grid">
+<section class="why">
+    <h2>Waarom Berkan’s Opperdiensten</h2>
+    <div class="why-grid">
+        <div class="why-item">Geen haastwerk</div>
+        <div class="why-item">Heldere afspraken</div>
+        <div class="why-item">Ervaring met aannemers</div>
+        <div class="why-item">Altijd netjes</div>
+    </div>
+</section>
 
+<section class="reviews">
+    <h2>Wat klanten zeggen</h2>
+    <div class="review-grid">
         <div class="review">
             <strong>Mark Jansen</strong>
             <span>Badkamer renovatie</span>
             <div class="stars">★★★★★</div>
-            Netjes gewerkt, goede communicatie en alles schoon achtergelaten.
+            Rustig gewerkt en alles schoon achtergelaten.
         </div>
-
         <div class="review">
             <strong>Ahmed El H.</strong>
             <span>Aannemer</span>
             <div class="stars">★★★★★</div>
-            Betrouwbare ZZP’er. Werkt rustig en professioneel.
+            Betrouwbaar en professioneel.
         </div>
-
         <div class="review">
             <strong>Linda Vermeer</strong>
             <span>Keuken sloop</span>
             <div class="stars">★★★★☆</div>
-            Alles volgens afspraak uitgevoerd. Tevreden.
+            Alles volgens afspraak uitgevoerd.
         </div>
-
-    </div>
-</div>
-
-<section>
-    <h2>Onze werkwijze</h2>
-    <div class="process">
-        <div class="step"><span>1.</span><br>Inventarisatie</div>
-        <div class="step"><span>2.</span><br>Gecontroleerd slopen</div>
-        <div class="step"><span>3.</span><br>Afvoer materiaal</div>
-        <div class="step"><span>4.</span><br>Schoon opleveren</div>
     </div>
 </section>
 
