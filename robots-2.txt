@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.b-opperdiensten.nl/sitemap.xml
